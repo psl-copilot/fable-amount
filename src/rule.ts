@@ -25,7 +25,7 @@ export async function handleTransaction(
     throw new Error('Invalid config provided - tolerance parameter not provided or invalid type');
   }
 
-const amount = transaction.amount as unknown as number;
+const amount = transaction.Payload.amount as unknown as number;
 
   return determineOutcome(amount, ruleConfig, ruleRes);
   
